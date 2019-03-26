@@ -21,6 +21,7 @@
         <module>upms-mapper</module>
         <module>upms-api</module>
         <module>upms-service</module>
+        <module>upms-web</module>
     </modules>
 
     <properties>
