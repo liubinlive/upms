@@ -19,6 +19,8 @@
         <module>upms-common</module>
         <module>upms-monitor</module>
         <module>upms-mapper</module>
+        <module>upms-api</module>
+        <module>upms-service</module>
     </modules>
 
     <properties>
