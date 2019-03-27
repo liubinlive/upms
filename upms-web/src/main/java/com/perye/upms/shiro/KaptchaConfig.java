@@ -29,7 +29,7 @@ public class KaptchaConfig {
         kaptchaProperties.put("kaptcha.textproducer.font.size", "60");
         //kaptchaProperties.put("kaptcha.noise.impl","com.google.code.kaptcha.impl.NoNoise");
         kaptchaProperties.put("kaptcha.noise.impl", "com.google.code.kaptcha.impl.DefaultNoise");
-        kaptchaProperties.put("kaptcha.textproducer.char.string", "123456789");
+        kaptchaProperties.put("kaptcha.textproducer.char.string", "123456789abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ987654321");
 
         Config config = new Config(kaptchaProperties);
         return config.getProducerImpl();

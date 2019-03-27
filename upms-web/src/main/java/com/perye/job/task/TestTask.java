@@ -52,8 +52,4 @@ public class TestTask {
         long end = System.currentTimeMillis();
         logger.info("任务全部完成，总耗时：" + (end - start) + "毫秒");
     }
-
-    public void test4() {
-        logger.info("傻逼");
-    }
 }
