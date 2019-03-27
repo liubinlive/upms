@@ -18,7 +18,6 @@ public interface SysDicMapper extends BaseMapper<SysDic> {
     /**
      * 获取变量树表
      *
-     * @param par
      * @return
      */
     List<Map<String, Object>> selectTreeGrid(Map<String, Object> par);
@@ -37,6 +36,5 @@ public interface SysDicMapper extends BaseMapper<SysDic> {
      * @return
      */
     List<Map<String, Object>> selectTreeByParentId(Map<String, Object> par);
-
 
 }

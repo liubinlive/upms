@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.perye.upms.mapper.SysRoleMapper">
+
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.perye.upms.entity.SysRole">
+    <resultMap id="BaseResultMap" type="com.perye.upms.entity.SysRole" >
         <result column="id" property="id" />
         <result column="name" property="name" />
         <result column="seq" property="seq" />
@@ -13,7 +15,7 @@
         <result column="create_user_id" property="createUserId" />
     </resultMap>
 
-    <resultMap id="RoleVoResultMap" type="com.perye.upms.entity.vo.RoleVo">
+    <resultMap id="RoleVoResultMap" type="com.perye.upms.entity.vo.RoleVo" >
         <result column="id" property="id" />
         <result column="name" property="name" />
         <result column="seq" property="seq" />
@@ -39,7 +41,7 @@
         </collection>
     </resultMap>
 
-    <!--多表页面信息查询-->
+    <!-- 多表页面信息查询 -->
     <select id="selectSysRolePage" parameterType="map" resultMap="BaseResultMap">
         SELECT
         t.id,
@@ -51,7 +53,7 @@
         t.update_time,
         t.create_user_id
         FROM
-        t_sys_role t where
+        t_sys_role t
         <where>
             <if test="params.createUserId!=null">
                 t.create_user_id = #{params.createUserId}
@@ -141,6 +143,5 @@
         where t3.`status`=0
         and t.id=#{roleId}
     </select>
-
 
 </mapper>

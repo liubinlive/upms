@@ -18,7 +18,6 @@ import java.util.Map;
  */
 public interface SysRoleMapper extends BaseMapper<SysRole> {
 
-
     /**
      * 多表页面信息查询
      * @param page
@@ -27,7 +26,6 @@ public interface SysRoleMapper extends BaseMapper<SysRole> {
      */
     IPage<SysRole> selectSysRolePage(Page page, @Param("params") Map<String, Object> params);
 
-
     /**
      * 多表信息查询
      * @param params
@@ -35,7 +33,9 @@ public interface SysRoleMapper extends BaseMapper<SysRole> {
      */
     List<SysRole> selectSysRoleList(Map<String, Object> params);
 
-    RoleVo selectByUserId(@Param("userId")Long userId);
+    RoleVo selectByUserId(@Param("userId") Long userId);
 
     RoleVo selectByRoleId(@Param("roleId") Long roleId);
+
+
 }

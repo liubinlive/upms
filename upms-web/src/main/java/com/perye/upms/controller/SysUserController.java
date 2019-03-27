@@ -118,6 +118,7 @@ public class SysUserController extends BaseController {
             String pwd = ShiroKit.md5(user.getPassword(), user.getLoginName() + salt);
             user.setPassword(pwd);
             user.setCreateTime(new Date());
+            user.setUpdateTime(new Date());
             user.setCreateUserId(ShiroKit.getUser().getId());
             sysUserService.saveByVo(user);
             return ResultMap.ok("添加成功");

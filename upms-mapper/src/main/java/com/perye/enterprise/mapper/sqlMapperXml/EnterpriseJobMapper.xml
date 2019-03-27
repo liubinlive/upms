@@ -3,7 +3,7 @@
 
 <mapper namespace="com.perye.enterprise.mapper.EnterpriseJobMapper">
 
-	<!-- 通用查询映射结果 -->
+    <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.perye.enterprise.entity.EnterpriseJob" >
         <result column="id" property="id" />
         <result column="department_id" property="departmentId" />

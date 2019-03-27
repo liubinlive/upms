@@ -92,158 +92,135 @@ public class EnterpriseDepartment extends Model<EnterpriseDepartment> {
     public void setId(String id) {
         this.id = id;
     }
-
     public String getId() {
         return id;
     }
-
     /**
      * 设置：企业部门父ID
      */
     public void setParentId(String parentId) {
         this.parentId = parentId;
     }
-
     /**
      * 获取：企业部门父ID
      */
     public String getParentId() {
         return parentId;
     }
-
     /**
      * 设置：企业ID(对应企业主表ID)
      */
     public void setEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
     }
-
     /**
      * 获取：企业ID(对应企业主表ID)
      */
     public String getEnterpriseId() {
         return enterpriseId;
     }
-
     /**
      * 设置：部门代码(可添加多个部门ID，用逗号隔开，表示该部门可以管理多个部门)
      */
     public void setDepartmentCode(String departmentCode) {
         this.departmentCode = departmentCode;
     }
-
     /**
      * 获取：部门代码(可添加多个部门ID，用逗号隔开，表示该部门可以管理多个部门)
      */
     public String getDepartmentCode() {
         return departmentCode;
     }
-
     /**
      * 设置：部门名称
      */
     public void setDepartmentName(String departmentName) {
         this.departmentName = departmentName;
     }
-
     /**
      * 获取：部门名称
      */
     public String getDepartmentName() {
         return departmentName;
     }
-
     /**
      * 设置：记录创建时间
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
-
     /**
      * 获取：记录创建时间
      */
     public Date getCreateTime() {
         return createTime;
     }
-
     /**
      * 设置：记录最后修改时间
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
-
     /**
      * 获取：记录最后修改时间
      */
     public Date getUpdateTime() {
         return updateTime;
     }
-
     /**
      * 设置：记录创建者(用户)
      */
     public void setCreateUser(String createUser) {
         this.createUser = createUser;
     }
-
     /**
      * 获取：记录创建者(用户)
      */
     public String getCreateUser() {
         return createUser;
     }
-
     /**
      * 设置：记录最后修改者(用户)
      */
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
-
     /**
      * 获取：记录最后修改者(用户)
      */
     public String getUpdateUser() {
         return updateUser;
     }
-
     /**
      * 设置：预留1
      */
     public void setParameter1(String parameter1) {
         this.parameter1 = parameter1;
     }
-
     /**
      * 获取：预留1
      */
     public String getParameter1() {
         return parameter1;
     }
-
     /**
      * 设置：预留2
      */
     public void setParameter2(String parameter2) {
         this.parameter2 = parameter2;
     }
-
     /**
      * 获取：预留2
      */
     public String getParameter2() {
         return parameter2;
     }
-
     /**
      * 设置：数据是否同步(0:是,1:否)
      */
     public void setIsSync(Integer isSync) {
         this.isSync = isSync;
     }
-
     /**
      * 获取：数据是否同步(0:是,1:否)
      */

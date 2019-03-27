@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.perye.upms.mapper.SysLogMapper">
 
-    <!--通用查询映射结果-->
-    <resultMap id="BaseResultMap" type="com.perye.upms.entity.SysLog">
-        <result column="id" property="id"/>
-        <result column="login_name" property="loginName"/>
-        <result column="role_name" property="roleName"/>
-        <result column="type" property="type"/>
-        <result column="operation" property="operation"/>
-        <result column="class_name" property="className"/>
-        <result column="method" property="method"/>
-        <result column="params" property="params"/>
-        <result column="time" property="time"/>
-        <result column="client_ip" property="clientIp"/>
-        <result column="create_time" property="createTime"/>
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.perye.upms.entity.SysLog" >
+        <result column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="role_name" property="roleName" />
+        <result column="type" property="type" />
+        <result column="operation" property="operation" />
+        <result column="class_name" property="className" />
+        <result column="method" property="method" />
+        <result column="params" property="params" />
+        <result column="time" property="time" />
+        <result column="client_ip" property="clientIp" />
+        <result column="create_time" property="createTime" />
     </resultMap>
 
-    <!--多表页面信息查询-->
-    <select id="selectSysLogPage" parameterType="map" resultMap="BaseResultMap">
+    <!-- 多表页面信息查询 -->
+    <select id="selectSysLogPage" parameterType="map"  resultMap="BaseResultMap">
         SELECT
         t.id,
         t.login_name,
@@ -31,7 +32,7 @@
         t.time,
         t.client_ip,
         t.create_time
-        from
+        FROM
         t_sys_log t
         <where>
             <if test="params.key!=null and params.key!=''">
@@ -45,14 +46,13 @@
                 t.type =#{params.type}
             </if>
             <if test=" params.startTime != null and params.starTime !='' and params.endTime !=null and params.endTime!=''">
-                and (t.create_time between concat(#{params.startTime},'00:00:00') and
-                concat(#{params.endTime},'00:00:00'))
+                and (t.create_time between concat(#{params.startTime},'00:00:00') and concat(#{params.endTime},"00:00:00"))
             </if>
         </where>
         order by t.create_time desc
     </select>
 
-    <!--多表信息查询-->
+    <!-- 多表信息查询 -->
     <select id="selectSysLogList" parameterType="map" resultMap="BaseResultMap">
         SELECT
         t.id,
@@ -66,7 +66,7 @@
         t.time,
         t.client_ip,
         t.create_time
-        from
+        FROM
         t_sys_log t
         <where>
             <if test="loginName!=null and loginName!=''">
@@ -76,7 +76,7 @@
                 t.type =#{type}
             </if>
             <if test=" startTime != null and starTime !='' and endTime !=null and endTime!=''">
-                and (t.create_time between concat(#{startTime},'00:00:00') and concat(#{endTime},'00:00:00'))
+                and (t.create_time between concat(#{startTime},'00:00:00') and concat(#{endTime},"00:00:00"))
             </if>
         </where>
     </select>

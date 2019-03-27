@@ -37,5 +37,4 @@ public interface ISysDicService extends IService<SysDic> {
      * @return
      */
     List<Map<String, Object>> selectTreeByParentId(Map<String, Object> params);
-
 }

@@ -19,7 +19,6 @@ public class MybatisPlusConfig {
 
     /**
      * mybatis-plus SQL执行效率插件【生产环境可以关闭】
-     * @return
      */
     @Bean
     public PerformanceInterceptor performanceInterceptor() {
@@ -28,11 +27,9 @@ public class MybatisPlusConfig {
 
     /**
      * 分页插件
-     * @return
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();
     }
-
 }

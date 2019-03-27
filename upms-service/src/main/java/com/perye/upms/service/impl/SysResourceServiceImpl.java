@@ -103,4 +103,3 @@ public class SysResourceServiceImpl extends ServiceImpl<SysResourceMapper, SysRe
         return subMenuList;
     }
 }
-

@@ -31,4 +31,3 @@ public interface IEnterpriseDepartmentService extends IService<EnterpriseDepartm
     List<TreeNode> selectTree(Map<String, Object> params);
 
 }
-

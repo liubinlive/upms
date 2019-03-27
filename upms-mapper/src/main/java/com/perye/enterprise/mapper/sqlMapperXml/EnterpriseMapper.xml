@@ -3,7 +3,7 @@
 
 <mapper namespace="com.perye.enterprise.mapper.EnterpriseMapper">
 
-	<!-- 通用查询映射结果 -->
+    <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.perye.enterprise.entity.Enterprise" >
         <result column="id" property="id" />
         <result column="prefix" property="prefix" />
@@ -163,5 +163,5 @@
         </where>
     </select>
 
-    
+
 </mapper>

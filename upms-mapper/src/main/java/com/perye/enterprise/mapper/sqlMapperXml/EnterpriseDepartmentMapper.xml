@@ -3,7 +3,7 @@
 
 <mapper namespace="com.perye.enterprise.mapper.EnterpriseDepartmentMapper">
 
-	<!-- 通用查询映射结果 -->
+    <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.perye.enterprise.entity.EnterpriseDepartment" >
         <result column="id" property="id" />
         <result column="parent_id" property="parentId" />

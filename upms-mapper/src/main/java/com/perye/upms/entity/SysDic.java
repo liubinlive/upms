@@ -21,16 +21,14 @@ import java.util.Date;
 @ApiModel(value = "数据字典表")
 @TableName("t_sys_dic")
 public class SysDic extends Model<SysDic> {
-
-    public static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     /**
-     * 主键id
+     * 主键ID
      */
-    @ApiModelProperty(value = "主键id")
+    @ApiModelProperty(value = "主键ID")
     @TableId(type = IdType.INPUT)
     private Long id;
-
     /**
      * 父变量ID
      */
@@ -212,5 +210,4 @@ public class SysDic extends Model<SysDic> {
     public String toString() {
         return JacksonUtils.toJson(this);
     }
-
 }

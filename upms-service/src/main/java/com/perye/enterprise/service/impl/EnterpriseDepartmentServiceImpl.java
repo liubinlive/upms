@@ -20,7 +20,6 @@ import java.util.Map;
 public class EnterpriseDepartmentServiceImpl extends ServiceImpl<EnterpriseDepartmentMapper, EnterpriseDepartment> implements IEnterpriseDepartmentService {
 
 
-
     @Override
     public List<Map<String, Object>> selectTreeGrid(Map<String, Object> params) {
         return this.baseMapper.selectTreeGrid(params);

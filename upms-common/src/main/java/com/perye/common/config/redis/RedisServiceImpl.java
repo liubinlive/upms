@@ -118,7 +118,7 @@ public class RedisServiceImpl implements IRedisService {
 
     @Override
     public <T> List<T> lget(String key) {
-        return this.lget(key, 0l, -1l);
+        return this.lget(key, 0L, -1L);
     }
 
     @SuppressWarnings("unchecked")

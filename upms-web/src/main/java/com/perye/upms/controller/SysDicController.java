@@ -34,37 +34,36 @@ public class SysDicController extends BaseController {
 
     /**
      * 数据字典树表
-     * @param dicName
-     * @param dicCode
+     *
      * @return
      */
     @GetMapping("/list")
     public Object treeGrid(@RequestParam(required = false) String dicName,
                            @RequestParam(required = false) String dicCode) {
-        Map<String, Object> params = new HashMap<>();
+        Map<String, Object> par = new HashMap<>();
         if (StringUtils.isNotBlank(dicName)) {
-            params.put("varName", StringUtils.deleteWhitespace(dicName));
+            par.put("varName", StringUtils.deleteWhitespace(dicName));
         }
         if (StringUtils.isNotBlank(dicCode)) {
-            params.put("varCode", StringUtils.deleteWhitespace(dicCode));
+            par.put("varCode", StringUtils.deleteWhitespace(dicCode));
         }
-        return sysDicService.selectTreeGrid(params);
+        return sysDicService.selectTreeGrid(par);
     }
 
     /**
      * 选择字典（添加、修改）
-     * @param pid
+     *
      * @return
      */
     @GetMapping("/select/{pid}")
-    public ResultMap select(@PathVariable("pid")Long pid) {
-        Map<String, Object> params = new HashMap<>();
+    public ResultMap select(@PathVariable("pid") Long pid) {
+        Map<String, Object> par = new HashMap<>();
         if (pid != null && 0 != pid) {
-            params.put("parentId", pid);
+            par.put("parentId", pid);
         }
-        List<TreeNode> treeNodes = sysDicService.selectTree(params);
-        treeNodes.add(TreeNode.createParent());
-        return ResultMap.ok().put("dicList", treeNodes);
+        List<TreeNode> tree = sysDicService.selectTree(par);
+        tree.add(TreeNode.createParent());
+        return ResultMap.ok().put("dicList", tree);
     }
 
     @GetMapping("/info/{dicId}")
@@ -192,7 +191,4 @@ public class SysDicController extends BaseController {
         }
         return ResultMap.ok().put("list", tree);
     }
-
-
-
 }

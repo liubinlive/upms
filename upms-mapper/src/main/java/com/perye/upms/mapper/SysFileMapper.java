@@ -19,6 +19,7 @@ public interface SysFileMapper extends BaseMapper<SysFile> {
 
     /**
      * 通过tableId和recordId获取相关附件信息
+     *
      * @param params
      * @return
      */

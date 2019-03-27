@@ -27,11 +27,9 @@ public interface SysLogMapper extends BaseMapper<SysLog> {
 
     /**
      * 多表信息查询
-     *
      * @param params
      * @return
      */
     List<SysLog> selectSysLogList(Map<String, Object> params);
-
 
 }

@@ -19,7 +19,6 @@ public interface SysRoleResourceMapper extends BaseMapper<SysRoleResource> {
 
     /**
      * 根据角色查找菜单ID集合
-     *
      * @param roleId
      * @return
      */
@@ -27,14 +26,15 @@ public interface SysRoleResourceMapper extends BaseMapper<SysRoleResource> {
     @ResultType(Long.class)
     List<Long> selectResourceIdListByRoleId(@Param("roleId") Long roleId);
 
-
     void deleteBatch(Long[] roleIds);
 
     /**
      * 根据角色查找菜单node集合
+     *
      * @param roleId
      * @return
      */
     List<SelectTreeNode> selectResourceNodeListByRoleId(@Param("roleId") Long roleId);
+
 
 }
